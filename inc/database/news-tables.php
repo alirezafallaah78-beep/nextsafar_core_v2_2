@@ -114,10 +114,7 @@ public static function seed_default_sources(): void {
         
         // ✅ RSS feeds معتبر و تست شده
         ['name' => 'Skift',               'url' => 'https://skift.com/feed/',                    'type' => 'rss', 'group_name' => 'industry', 'priority' => 10],
-        ['name' => 'eTurboNews',          'url' => 'https://www.eturbonews.com/feed/',           'type' => 'rss', 'group_name' => 'industry', 'priority' => 9],
         ['name' => 'Travel and Tour World','url' => 'https://www.travelandtourworld.com/feed/',  'type' => 'rss', 'group_name' => 'industry', 'priority' => 8],
-        ['name' => 'ETB Travel News',     'url' => 'https://www.etbtravelnews.com/feed/',       'type' => 'rss', 'group_name' => 'industry', 'priority' => 7],
-        ['name' => 'PhocusWire',          'url' => 'https://www.phocuswire.com/rss',             'type' => 'rss', 'group_name' => 'industry', 'priority' => 6],
     ];
     foreach ($sources as $s) $wpdb->insert($table, $s + ['is_active' => 1]);
     error_log('✅ NextSafar: منابع پیش‌فرض seed شد');
